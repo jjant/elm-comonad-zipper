@@ -178,7 +178,7 @@ extract (Zipper _ a _) =
 
 -}
 duplicate : Zipper a -> Zipper (Zipper a)
-duplicate ((Zipper prev curr next) as z) =
+duplicate z =
     let
         lefts =
             List.reverse <| gather leftMay z
